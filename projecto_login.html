@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Título</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login">
+            <img src="logo_uma_branco.png">
+            <a id="site">Infoalunos.uma.pt</a>
+            <div class="alinhamento">
+                <input id="email" type="email" placeholder="Insira o seu email">
+                <input id="password" type="password" placeholder="Insira a sua Password">
+            </div>
+            
+            <button class="botao"> Entrar  </button>
+        </div>
+    </div>
+</body>
+
+<style>
+    body {
+        margin: 0px;
+    }
+
+    #email {
+        min-width: 300px;
+        height: 25px;
+        border: 1px;
+        border-radius: 2px;
+        padding: 5px;
+        grid-area:log;
+    }
+
+    #password {
+        min-width: 300px;
+        height: 25px;
+        border: 1px;
+        border-radius: 2px;
+        padding: 5px;
+        border-bottom-color: black;
+        grid-area:pass;
+    }
+
+    .botao{
+        width:300px;
+        height:30px;
+        background-color:rgb(32, 112, 165) ;
+        color:white;
+        border:2px solid white;;
+        padding:0px;
+        margin:0px;
+        border-color:white;
+    }
+    .container {
+        background-color: white;
+        height: 100vh;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .login {
+        background-color: rgb(32, 112, 165);
+        height: 500px;
+        width: 750px;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        color: white;
+        font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+        display: grid;
+    }
+    .alinhamento{
+        gap:15px;
+        display:grid;
+        grid-template-areas:"log""pass" ;
+        grid-template-areas: "log"
+                             "pass";
+    }
+    #site{
+        font-size:40px;
+    }
+</style>
+
+</html>
