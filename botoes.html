@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button type="button" class="button primaria">Primeiro</button>
+    <button type="button" class="button secundaria">Secundario</button>
+    <button type="button" class="button aceite">Aceite</button>
+    <button type="button" class="button erro">Erro</button>
+    <button type="button" class="button aviso">Aviso</button>
+    <button type="button" class="button info">Info</button>
+    <button type="button" class="button claro">Claro</button>
+    <button type="button" class="button escuro">Escuro</button>
+
+</body>
+<style>
+    :root {
+
+        --cor-primaria: rgb(32, 112, 165);
+        --cor-secundária: lightslategray;
+        --cor-aceite: green;
+        --cor-erro: red;
+        --cor-aviso: yellow;
+        --cor-info: lightblue;
+        --cor-claro: white;
+        --cor-escuro: black;
+    }
+
+    .button.primaria {
+        background-color: var(--cor-primaria);
+    }
+
+    .button.secundaria {
+        background-color: var(--cor-secundária);
+    }
+
+    .button.aceite {
+        background-color: var(--cor-aceite);
+    }
+
+    .button.erro {
+        background-color: var(--cor-erro);
+    }
+
+    .button.aviso {
+        background-color: var(--cor-aviso);
+    }
+
+    .button.info {
+        background-color: var(--cor-info);
+    }
+
+    .button.claro {
+        background-color: var(--cor-claro);
+    }
+
+    .button.escuro {
+        background-color: var(--cor-escuro);
+        color:white;
+    }
+</style>
+
+</html>
