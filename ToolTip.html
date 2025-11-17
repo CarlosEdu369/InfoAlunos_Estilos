@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToolTip</title>
+</head>
+
+<body>
+    <button id="informacao-opener" popovertarget="info" class="info-icon">informação</button>
+    <div id="info" popover class="info-tooltip forma">
+        Lorem ipsum dolor sit amet
+    </div>
+
+</body>
+<style>
+    .forma {
+        padding-left: .75rem;
+        clip-path: polygon(100% 0%,
+                100% 100%,
+                5px 100%,
+                5px calc(50% + 5px),
+                0% 50%,
+                5px calc(50% - 5px),
+                5px 0%);
+    }
+
+    #informacao-opener {
+        anchor-name: --informacao-opener;
+        border:solid,2px,orange;
+        border-radius: 10px;
+        height:30px;
+    }
+
+    .info-tooltip[popover] {
+        background: #007bff;
+        padding: 5px 10px;
+        border: none;
+        color: #fff;
+    }
+
+    #info {
+        margin: 0;
+        position: absolute;
+        position-anchor: --informacao-opener;
+        position-area: right;
+        position-try-fallbacks: left;
+    }
+</style>
+
+</html>
