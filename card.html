@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body class="body">
+    <div class="container">
+        <div class="card1 ">I recieved a job  offer mid-course,and the subjects i learned were current,if not more so, in the company joined.i honestly feel i got every penny's worth.
+        </div>
+        <div class="card2 ">asd</div>
+        <div class="card3 ">asd</div>
+        <div class="card4 ">asd</div>
+        <div class="card5 ">asd</div>
+    </div>
+    <style>
+        .container {
+            background-color: grey;
+            gap: 20px;
+            height: 100vh;
+            display: grid;
+            justify-content: center;
+            align-content: center;
+            grid-template-columns: repeat(4, 200px);
+            /* 4 colunas de 200px */
+            grid-template-rows: repeat(2, 200px);
+            /* 2 linhas de 200px */
+            grid-template-areas: "c1 c1 c2 c3"
+                "c4 c5 c5 c3";
+        }
+
+        .body {
+            margin: 0px;
+        }
+
+        .card1 {
+            background-color: blueviolet;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            display:flex;
+            border-radius: 10px;
+            grid-area: c1;
+            color: white;
+        }
+
+        .card2 {
+            background-color: blue;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            display:flex;
+            border-radius: 10px;
+            grid-area: c2;
+        }
+
+        .card3 {
+            background-color: lightgreen;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            display:flex;
+            border-radius: 10px;
+            grid-area: c3;
+        }
+
+        .card4 {
+            background-color: lightcyan;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            display:flex;
+            border-radius: 10px;
+            grid-area: c4;
+        }
+
+        .card5 {
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            display:flex;
+            background-color: lightcoral;
+            border-radius: 10px;
+            grid-area: c5;
+        }
+    </style>
+
+
+</body>
+
+</html>
