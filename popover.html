@@ -11,15 +11,46 @@
     <main>
         <div class="wrapper">
             <article class="flow">
-                <button popovertarget="my-popover">Abrir Popover</button>
+                <button id="popover"popovertarget="my-popover">Abrir Popover</button>
             </article>
         </div>
     </main>
-    <div popover id="my-popover" class="box flow">
+    <div popover id="my-popover" class="box_flow">
         <h2>Isto é um popover!</h2>
-        <button popovertarget="my-popover" popovertargetaction="hide">Fechar Popover</button>
-        </article>
+        <button id="my_popover"popovertarget="my-popover" popovertargetaction="hide">Fechar Popover</button>
     </div>
 </body>
-
+<style>
+    #popover{
+        height:50px;
+        width:90px;
+        border:solid orange 2px;
+        border-radius:5px;
+    }
+.box_flow{
+    border-radius:5px;
+    border:solid 1px blue;
+    height:200px;
+    width:250px;
+    justify-content: center;
+    align-items: top;
+    display: grid; 
+    grid-template-areas: "botao""titulo";
+    grid-template-areas: "titulo"
+                        "botao";
+}
+.h2{
+    grid-area:titulo;
+}
+#my_popover{
+    justify-content: center;
+    align-items: center;
+    height:50px;
+    width:100px;
+    margin-left:auto;
+    background-color: lightskyblue;
+    border-radius:5px;
+    grid-area:botao;
+}
+</style>
 </html>
