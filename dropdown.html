@@ -10,7 +10,7 @@
 <body>
     <nav>
         <button id="anchor" popoveraction="toggle" popovertarget="target">
-            Toggle Dropdown Menu ▾
+            Menu Dropdown ▼ 
         </button>
         <ul id="target" popover>
             <li><a href="#">Link 1</a></li>
@@ -22,12 +22,29 @@
 </body>
 
 <style>
+    body{
+        padding:10px;
+    }
     ul[popover] {
-        margin: 0;
+        margin: 0px;
+        border:0px solid;
+        border-radius:5px ;
+        padding:10px;
+        align-content: center;
+        text-align: center;
+        box-shadow: 0px 10px 15px grey;
     }
 
     #anchor {
         anchor-name: --toggle;
+        border-radius:5px;
+        border:0px;
+        background-color: lightgrey;
+        height:30px;
+        width:150px;
+        padding:0px;
+        margin:0px;
+
     }
 
     #target {

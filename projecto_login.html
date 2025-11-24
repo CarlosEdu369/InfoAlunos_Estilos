@@ -13,11 +13,13 @@
             <img src="logo_uma_branco.png">
             <a id="site">Infoalunos.uma.pt</a>
             <div class="alinhamento">
-                <input id="email" type="email" placeholder="Insira o seu email">
-                <input id="password" type="password" placeholder="Insira a sua Password">
+                <label>Email</label>
+                <input id="email" type="email"  class="form-control"placeholder="Insira o seu email">
+                <label>Password</label>
+                <input id="password" type="password" class="form-control" placeholder="Insira a sua Password">
             </div>
             
-            <button class="botao"> Entrar  </button>
+            <button class="botao"> Entrar </button>
         </div>
     </div>
 </body>
@@ -40,6 +42,7 @@
         border-radius: 2px;
         padding: 5px;
         grid-area:log;
+    
     }
 
     #password {
@@ -50,6 +53,7 @@
         padding: 5px;
         border-bottom-color: black;
         grid-area:pass;
+        
     }
 
     .botao{
@@ -95,14 +99,61 @@
         display: grid;
     }
     .alinhamento{
-        gap:15px;
+        gap:10px;
         display:grid;
         grid-template-areas:"log""pass" ;
-        grid-template-areas: "log"
-                             "pass";
+        grid-template-areas: ".""log"
+                             ".""pass";
+    }
+    label{
+        text-align: start;
     }
     #site{
         font-size:40px;
+    }
+    :root {
+
+        --cor-primaria: rgb(32, 112, 165);
+        --cor-secundária: lightslategray;
+        --cor-aceite: green;
+        --cor-erro: red;
+        --cor-aviso: yellow;
+        --cor-info: lightblue;
+        --cor-claro: white;
+        --cor-escuro: black;
+    }
+
+    .button.primaria {
+        background-color: var(--cor-primaria);
+    }
+
+    .button.secundaria {
+        background-color: var(--cor-secundária);
+    }
+
+    .button.aceite {
+        background-color: var(--cor-aceite);
+    }
+
+    .button.erro {
+        background-color: var(--cor-erro);
+    }
+
+    .button.aviso {
+        background-color: var(--cor-aviso);
+    }
+
+    .button.info {
+        background-color: var(--cor-info);
+    }
+
+    .button.claro {
+        background-color: var(--cor-claro);
+    }
+
+    .button.escuro {
+        background-color: var(--cor-escuro);
+        color:white;
     }
 </style>
 
