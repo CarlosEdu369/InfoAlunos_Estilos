@@ -15,9 +15,49 @@
  <a class="nav-link" href="#">Ícones</a>
  <a class="nav-link" href="#">Temas</a>
  <a class="nav-link" href="#">Blog</a>
- <a class="nav-link disabled">Disabled</a>
+ <a class="nav-link_disabled">Disabled</a>
  </div>
+ <input class="procura" type="text" placeholder="Procurar"/><span style="margin-left:-150px">awd</span>
  </div>
 </nav>
 </body>
 </html>
+<style>
+    ::placeholder{
+        color:white;
+    }
+    .procura{
+        background-color: rgb(181, 128, 233);
+        border:solid 1px;
+        border-radius:2px;
+        background-image: url("procura.png");
+    }
+    .container-fluid{
+        background-color: rgb(181, 128, 233);
+        display:flex;
+        padding:10px;
+        height:30px;
+        gap:5px;
+        border:solid 1px;
+        box-shadow: 0px 10px 15px grey;
+
+    }
+    .nav-link:hover{
+        cursor:pointer;
+        color:blue;
+    }
+    .navbar-brand:hover{
+        cursor:pointer;
+        color:blue;
+    }
+    .nav-link{
+        color:white;
+    }
+    .navbar-brand{
+        color:white;
+        
+    }
+    .nav-link_disabled{
+        color:black;
+    }
+</style>
