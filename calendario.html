@@ -129,7 +129,6 @@
                 <button>Pesquisar</button>
             </div>
 
-            <!-- HORÁRIO / CALENDÁRIO -->
             <div class="calendario-card">
                 <p><strong>Horário Semanal</strong></p>
 
@@ -152,7 +151,6 @@
                 </table>
             </div>
 
-            <!-- SUMÁRIO -->
             <div class="calendario-card">
                 <p><strong>Sumário da Aula</strong></p>
 
@@ -179,7 +177,38 @@
 
 
 <style>
+.calendario-card {
+    border: 2px solid black;
+    padding: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 
+.calendario-card button {
+    width: fit-content;
+    padding: 6px 14px;
+    background-color: #223a2c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.tabela-calendario {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-calendario th,
+.tabela-calendario td {
+    border: 1px solid black;
+    padding: 6px;
+}
+
+.tabela-calendario th {
+    background-color: lightgray;
+}
     .main {
         display: flex;
     }
@@ -286,7 +315,6 @@
 
         .container2 {
             width: 100%;
-            /*Mantém o comprimento do tamanho da tela */
             height: auto;
             max-height: none;
             box-sizing: border-box;
@@ -302,7 +330,6 @@
         details summary {
             display: block;
             display: list-item;
-            /*isto permite que o icone da seta volte a aparecer no mobile */
         }
 
         .rodape {
@@ -315,7 +342,6 @@
             margin-left: 0;
             word-spacing: 3px;
             text-align: center;
-            /* mantém espaçamento entre palavras */
         }
 
         .container3 {
