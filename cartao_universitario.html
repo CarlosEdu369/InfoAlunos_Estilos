@@ -113,51 +113,30 @@
             </details>
         </div>
         <div class="container3">
-            <div class="pagamentos">
-                <p><strong>Pagamentos</strong></p>
-                <table class="tabela-pagamentos">
-                    <tr>
-                        <th>Data limite de pagamento</th>
-                        <th>Valor</th>
-                        <th>Estado</th>
-                    </tr>
-                    <tr>
-                        <td>Propina 1 - 31/01/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                    <tr>
-                        <td>Propina 2 - 28/02/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                    <tr>
-                        <td>Propina 3 - 31/03/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                    <tr>
-                        <td>Propina 4 - 30/04/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="pautas">
-                <p><strong>Pautas</strong></p>
-                <p>Sem informações</p>
-            </div>
-            <div class="requerimentos">
-                <p><strong>Requerimentos</strong></p>
-                <p>Sem informações</p>
-            </div>
-            <div class="avisos">
-                <p><strong>Avisos</strong></p>
-                <li>lashdjdhwasdk</li>
+            <div class="cartao">
 
+                <h2>Cartão Universitário</h2>
 
+                <hr>
 
+                <h3>Dados do Titular</h3>
+                <ul>
+                    <li><strong>Nome:</strong> João Silva</li>
+                    <li><strong>Número de Aluno:</strong> 20231234</li>
+                    <li><strong>Curso:</strong> Licenciatura em Engenharia Informática</li>
+                </ul>
 
+                <h3>Dados de Emissão</h3>
+                <ul>
+                    <li><strong>Número do Cartão:</strong> CU-985412</li>
+                    <li><strong>Data de Emissão:</strong> 15/10/2024</li>
+                    <li><strong>Validade:</strong> 30/09/2027</li>
+                </ul>
+
+                <h3>Estado do Cartão</h3>
+                <p class="estado ativo">Cartão ativo</p>
+
+                <button class="botao">Pedir Reemissão</button>
 
             </div>
         </div>
@@ -256,7 +235,7 @@
         gap: 5px;
         color: black;
         height: 34vh;
-        padding: px;
+        padding: 5px;
         width: 100%;
         margin: 0;
         border: solid black 2px;
@@ -300,19 +279,18 @@
     }
 
     .container2 {
-        max-height: 100%;
-        padding: 20px;
-        height: 100%;
-        background-color: lightslategray;
-        width: 220px;
-        color: white;
-    }
+    width: 220px;
+    background-color: lightslategray;
+    color: white;
+    padding: 20px;
+    min-height: 100%;
+}
 
     body {
-        height: 100%;
         margin: 0px;
-        max-height: 100%;
-        max-width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
 
     header {

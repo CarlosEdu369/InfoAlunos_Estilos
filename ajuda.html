@@ -18,7 +18,7 @@
 
     <div class="main">
         <div class="container2">
-                <p class="escolha"><a href="pagina_principal.html">Inicio</a></p>
+            <p class="escolha"><a href="pagina_principal.html">Inicio</a></p>
             </details>
             <details>
                 <summary>
@@ -113,53 +113,38 @@
             </details>
         </div>
         <div class="container3">
-            <div class="pagamentos">
-                <p><strong>Pagamentos</strong></p>
-                <table class="tabela-pagamentos">
-                    <tr>
-                        <th>Data limite de pagamento</th>
-                        <th>Valor</th>
-                        <th>Estado</th>
-                    </tr>
-                    <tr>
-                        <td>Propina 1 - 31/01/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                    <tr>
-                        <td>Propina 2 - 28/02/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                    <tr>
-                        <td>Propina 3 - 31/03/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                    <tr>
-                        <td>Propina 4 - 30/04/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                </table>
+
+            <div class="ajuda-box">
+                <p><strong>Contactos</strong></p>
+                <p>
+                    Informações de contacto dos serviços académicos
+                    para apoio ao aluno.
+                </p>
+                <p>Email: info@universidade.pt</p>
+                <p>Telefone: 291 000 000</p>
+                <p>Localização: Serviços Académicos</p>
             </div>
-            <div class="pautas">
-                <p><strong>Pautas</strong></p>
-                <p>Sem informações</p>
+
+            <div class="ajuda-box">
+                <p><strong>Contacto Direto</strong></p>
+                <p>
+                    Área destinada ao contacto direto com os serviços,
+                    permitindo o envio de mensagens de apoio ou esclarecimento.
+                </p>
+                <form>
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" placeholder="Nome do aluno">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="email@universidade.pt">
+
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" rows="4" placeholder="Escreva a sua mensagem"></textarea>
+
+                    <button type="button">Enviar</button>
+                </form>
             </div>
-            <div class="requerimentos">
-                <p><strong>Requerimentos</strong></p>
-                <p>Sem informações</p>
-            </div>
-            <div class="avisos">
-                <p><strong>Avisos</strong></p>
-                <li>lashdjdhwasdk</li>
 
-
-
-
-
-            </div>
         </div>
     </div>
     <footer>
@@ -177,6 +162,38 @@
 
 
 <style>
+    .ajuda-box {
+        border: 2px solid black;
+        padding: 10px;
+        background-color: white;
+        color: black;
+    }
+
+    .ajuda-box form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .ajuda-box label {
+        font-weight: bold;
+    }
+
+    .ajuda-box input,
+    .ajuda-box textarea {
+        padding: 6px;
+        border: 1px solid #999;
+    }
+
+    .ajuda-box button {
+        width: fit-content;
+        padding: 6px 12px;
+        border: none;
+        background-color: #223a2c;
+        color: white;
+        cursor: pointer;
+    }
+
     .tabela-pagamentos {
         width: 100%;
         border-collapse: collapse;
@@ -256,7 +273,7 @@
         gap: 5px;
         color: black;
         height: 34vh;
-        padding: px;
+        padding: 5px;
         width: 100%;
         margin: 0;
         border: solid black 2px;
@@ -300,19 +317,18 @@
     }
 
     .container2 {
-        max-height: 100%;
-        padding: 20px;
-        height: 100%;
-        background-color: lightslategray;
         width: 220px;
+        background-color: lightslategray;
         color: white;
+        padding: 20px;
+        min-height: 100%;
     }
 
     body {
-        height: 100%;
         margin: 0px;
-        max-height: 100%;
-        max-width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
 
     header {

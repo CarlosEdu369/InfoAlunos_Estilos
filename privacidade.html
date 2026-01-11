@@ -113,16 +113,33 @@
             </details>
         </div>
         <div class="container3">
-            <div class="pagamentos">
-                <p><strong>Pagamentos</strong></p>
+
+            <div class="privacidade-box">
+                <p><strong>Autorização de Dados Pessoais</strong></p>
+                <p>
+                    Gestão da autorização para utilização dos dados pessoais
+                    para fins académicos, administrativos e estatísticos.
+                </p>
+                <button>Autorizo</button>
             </div>
-            <div class="requerimentos">
-                <p><strong>Requerimentos</strong></p>
-                <p>Sem informações</p>
+
+            <div class="privacidade-box">
+                <p><strong>Preferências de Email</strong></p>
+                <p>
+                    Autorizo que a Universidade da Madeira utilize o endereço do meu email institucional , para envio de informações não académicas e/ou não relacionadas com o/s curso/s em que me encontro inscrito.
+                </p>
+                
             </div>
-            <div class="avisos">
-                <p><strong>Avisos</strong></p>
+
+            <div class="privacidade-box">
+                <p><strong>Lista Alumni</strong></p>
+                <p>
+                    Autorização para inclusão dos dados do aluno na rede Alumni
+                    após a conclusão do curso.
+                </p>
+                <button>Autorizo</button>
             </div>
+
         </div>
     </div>
     <footer>
@@ -140,43 +157,16 @@
 
 
 <style>
+    .privacidade-box {
+            border: 2px solid black;
+            padding: 10px;
+            background-color: white;
+            color: black;
+    }
     .main {
         display: flex;
     }
 
-
-    .pagamentos {
-        width: auto;
-        color: black;
-        background-color: white;
-        height: auto;
-        grid-area: pagamentos;
-        border: 2px solid black;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-direction: column;
-        padding: 5px;
-    }
-
-    .requerimentos {
-        height: auto;
-        color: black;
-        background-color: white;
-        width: auto;
-        grid-area: requerimentos;
-        border: 2px solid black;
-        padding: 5px;
-    }
-
-    .avisos {
-
-        color: black;
-        background-color: white;
-        grid-area: avisos;
-        border: 2px solid black;
-        padding: 5px;
-    }
 
     .container3 {
         background-color: white;
@@ -184,16 +174,13 @@
         width: 100%;
         display: grid;
         gap: 6px;
-        grid-template-areas: ". requerimentos.  "
-            ". avisos ."
-            ". pagamentos .";
     }
 
     .rodape {
         gap: 5px;
         color: black;
         height: 34vh;
-        padding: px;
+        padding:5px;
         width: 100%;
         margin: 0;
         border: solid black 2px;
@@ -236,20 +223,19 @@
         cursor: pointer;
     }
 
-    .container2 {
-        max-height: 100%;
-        padding: 20px;
-        height: 100%;
-        background-color: lightslategray;
-        width: 220px;
-        color: white;
-    }
+     .container2 {
+    width: 220px;
+    background-color: lightslategray;
+    color: white;
+    padding: 20px;
+    min-height: 100%;
+}
 
     body {
-        height: 100%;
         margin: 0px;
-        max-height: 100%;
-        max-width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
 
     header {

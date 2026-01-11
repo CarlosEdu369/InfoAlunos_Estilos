@@ -113,53 +113,52 @@
             </details>
         </div>
         <div class="container3">
-            <div class="pagamentos">
-                <p><strong>Pagamentos</strong></p>
-                <table class="tabela-pagamentos">
-                    <tr>
-                        <th>Data limite de pagamento</th>
-                        <th>Valor</th>
-                        <th>Estado</th>
-                    </tr>
-                    <tr>
-                        <td>Propina 1 - 31/01/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                    <tr>
-                        <td>Propina 2 - 28/02/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                    <tr>
-                        <td>Propina 3 - 31/03/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                    <tr>
-                        <td>Propina 4 - 30/04/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="pautas">
-                <p><strong>Pautas</strong></p>
-                <p>Sem informações</p>
-            </div>
-            <div class="requerimentos">
-                <p><strong>Requerimentos</strong></p>
-                <p>Sem informações</p>
-            </div>
-            <div class="avisos">
-                <p><strong>Avisos</strong></p>
-                <li>lashdjdhwasdk</li>
+            <div class="declaracoes-card">
+        <p><strong>Lista de Cursos</strong></p>
 
+        <ul>
+            <li>Licenciatura em Engenharia Informática</li>
+            <li>Licenciatura em Gestão</li>
+            <li>Mestrado em Informática</li>
+        </ul>
+    </div>
 
+    <!-- DECLARAÇÕES SOCIAIS -->
+    <div class="declaracoes-card">
+        <p><strong>Declarações Sociais</strong></p>
 
+        <label>Tipo de Declaração</label>
+        <select>
+            <option>Declaração para Bolsa</option>
+            <option>Declaração IRS</option>
+            <option>Declaração de Frequência</option>
+        </select>
 
+        <button>Solicitar Declaração</button>
+    </div>
 
-            </div>
+    <!-- HISTÓRICO -->
+    <div class="declaracoes-card">
+        <p><strong>Histórico de Declarações</strong></p>
+
+        <table class="tabela-declaracoes">
+            <tr>
+                <th>Tipo</th>
+                <th>Data</th>
+                <th>Estado</th>
+            </tr>
+            <tr>
+                <td>Declaração de Frequência</td>
+                <td>05/01/2026</td>
+                <td>Emitida</td>
+            </tr>
+            <tr>
+                <td>Declaração para Bolsa</td>
+                <td>20/12/2025</td>
+                <td>Emitida</td>
+            </tr>
+        </table>
+    </div>
         </div>
     </div>
     <footer>
@@ -177,23 +176,40 @@
 
 
 <style>
-    .tabela-pagamentos {
-        width: 100%;
-        border-collapse: collapse;
-    }
 
-    .tabela-pagamentos th,
-    .tabela-pagamentos td {
-        border: 1px solid black;
-        padding: 6px;
-        text-align: left;
-    }
+.declaracoes-card {
+    border: 2px solid black;
+    padding: 15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-    .tabela-pagamentos th {
-        background-color: lightgray;
-        font-weight: bold;
+.declaracoes-card button {
+    width: fit-content;
+    padding: 6px 14px;
+    background-color: #454545;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 
-    }
+.tabela-declaracoes {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-declaracoes th,
+.tabela-declaracoes td {
+    border: 1px solid black;
+    padding: 6px;
+    text-align: left;
+}
+
+.tabela-declaracoes th {
+    background-color: lightgray;
+}
 
     .main {
         display: flex;
@@ -209,38 +225,6 @@
         padding: 5px;
     }
 
-    .pagamentos {
-        width: auto;
-        color: black;
-        background-color: white;
-        height: auto;
-        grid-area: pagamentos;
-        border: 2px solid black;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-direction: column;
-        padding: 5px;
-    }
-
-    .requerimentos {
-        height: auto;
-        color: black;
-        background-color: white;
-        width: auto;
-        grid-area: requerimentos;
-        border: 2px solid black;
-        padding: 5px;
-    }
-
-    .avisos {
-
-        color: black;
-        background-color: white;
-        grid-area: avisos;
-        border: 2px solid black;
-        padding: 5px;
-    }
 
     .container3 {
         background-color: white;
@@ -248,15 +232,14 @@
         width: 100%;
         display: grid;
         gap: 6px;
-        grid-template-areas: "requerimentos pautas pagamentos"
-            "avisos avisos avisos";
+       flex-direction: column;
     }
 
     .rodape {
         gap: 5px;
         color: black;
         height: 34vh;
-        padding: px;
+        padding: 5px;
         width: 100%;
         margin: 0;
         border: solid black 2px;
@@ -300,19 +283,18 @@
     }
 
     .container2 {
-        max-height: 100%;
-        padding: 20px;
-        height: 100%;
-        background-color: lightslategray;
         width: 220px;
+        background-color: lightslategray;
         color: white;
+        padding: 20px;
+        min-height: 100%;
     }
 
     body {
-        height: 100%;
         margin: 0px;
-        max-height: 100%;
-        max-width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
 
     header {

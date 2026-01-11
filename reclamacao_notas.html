@@ -18,7 +18,7 @@
 
     <div class="main">
         <div class="container2">
-                <p class="escolha"><a href="pagina_principal.html">Inicio</a></p>
+            <p class="escolha"><a href="pagina_principal.html">Inicio</a></p>
             </details>
             <details>
                 <summary>
@@ -113,52 +113,68 @@
             </details>
         </div>
         <div class="container3">
-            <div class="pagamentos">
-                <p><strong>Pagamentos</strong></p>
-                <table class="tabela-pagamentos">
+            <div class="reclamacao">
+                <p><strong>Pesquisa de Reclamações</strong></p>
+
+                <label>Unidade Curricular</label>
+                <select>
+                    <option>Programação Web</option>
+                    <option>Bases de Dados</option>
+                    <option>Sistemas Operativos</option>
+                </select>
+
+                <label>Estado</label>
+                <select>
+                    <option>Todas</option>
+                    <option>Submetida</option>
+                    <option>Em análise</option>
+                    <option>Respondida</option>
+                </select>
+
+                <button>Pesquisar</button>
+            </div>
+
+            <!-- LISTA -->
+            <div class="reclamacao">
+                <p><strong>Lista de Reclamações</strong></p>
+
+                <table>
                     <tr>
-                        <th>Data limite de pagamento</th>
-                        <th>Valor</th>
+                        <th>UC</th>
+                        <th>Data</th>
                         <th>Estado</th>
                     </tr>
                     <tr>
-                        <td>Propina 1 - 31/01/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                    <tr>
-                        <td>Propina 2 - 28/02/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                    <tr>
-                        <td>Propina 3 - 31/03/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                    <tr>
-                        <td>Propina 4 - 30/04/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
+                        <td>Programação Web</td>
+                        <td>10/01/2026</td>
+                        <td>Em análise</td>
                     </tr>
                 </table>
             </div>
-            <div class="pautas">
-                <p><strong>Pautas</strong></p>
-                <p>Sem informações</p>
+
+            <!-- DETALHE -->
+            <div class="reclamacao">
+                <p><strong>Detalhe da Reclamação</strong></p>
+
+                <p><strong>UC:</strong> Programação Web</p>
+                <p><strong>Motivo:</strong> Discordância da avaliação do projeto prático.</p>
+                <p><strong>Estado:</strong> Em análise</p>
             </div>
-            <div class="requerimentos">
-                <p><strong>Requerimentos</strong></p>
-                <p>Sem informações</p>
-            </div>
-            <div class="avisos">
-                <p><strong>Avisos</strong></p>
-                <li>lashdjdhwasdk</li>
 
+            <!-- SUBMETER NOVA -->
+            <div class="reclamacao">
+                <p><strong>Submeter Nova Reclamação</strong></p>
 
+                <label>Unidade Curricular</label>
+                <select>
+                    <option>Programação Web</option>
+                    <option>Bases de Dados</option>
+                </select>
 
+                <label>Motivo da Reclamação</label>
+                <textarea rows="4" placeholder="Descreva o motivo da reclamação"></textarea>
 
-
+                <button>Submeter</button>
             </div>
         </div>
     </div>
@@ -177,79 +193,47 @@
 
 
 <style>
-    .tabela-pagamentos {
+    .reclamacao table {
         width: 100%;
         border-collapse: collapse;
     }
 
-    .tabela-pagamentos th,
-    .tabela-pagamentos td {
+    .reclamacao th,
+    .reclamacao td {
         border: 1px solid black;
-        padding: 6px;
+        padding: 8px;
         text-align: left;
     }
 
-    .tabela-pagamentos th {
-        background-color: lightgray;
-        font-weight: bold;
+    .reclamacao {
+        border: 2px solid black;
+        padding: 10px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
 
+    .reclamacao button {
+        width: fit-content;
+        padding: 6px 12px;
+        background-color: #223a2c;
+        color: white;
+        border: none;
+        cursor: pointer;
     }
 
     .main {
         display: flex;
     }
 
-    .pautas {
-        width: auto;
-        color: black;
-        background-color: white;
-        height: auto;
-        grid-area: pautas;
-        border: 2px solid black;
-        padding: 5px;
-    }
-
-    .pagamentos {
-        width: auto;
-        color: black;
-        background-color: white;
-        height: auto;
-        grid-area: pagamentos;
-        border: 2px solid black;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-direction: column;
-        padding: 5px;
-    }
-
-    .requerimentos {
-        height: auto;
-        color: black;
-        background-color: white;
-        width: auto;
-        grid-area: requerimentos;
-        border: 2px solid black;
-        padding: 5px;
-    }
-
-    .avisos {
-
-        color: black;
-        background-color: white;
-        grid-area: avisos;
-        border: 2px solid black;
-        padding: 5px;
-    }
-
     .container3 {
         background-color: white;
         padding: 20px;
         width: 100%;
-        display: grid;
-        gap: 6px;
-        grid-template-areas: "requerimentos pautas pagamentos"
-            "avisos avisos avisos";
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
     }
 
     .rodape {
@@ -300,19 +284,18 @@
     }
 
     .container2 {
-        max-height: 100%;
-        padding: 20px;
-        height: 100%;
-        background-color: lightslategray;
         width: 220px;
+        background-color: lightslategray;
         color: white;
+        padding: 20px;
+        min-height: 100%;
     }
 
     body {
-        height: 100%;
         margin: 0px;
-        max-height: 100%;
-        max-width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
 
     header {

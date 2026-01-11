@@ -113,53 +113,57 @@
             </details>
         </div>
         <div class="container3">
-            <div class="pagamentos">
-                <p><strong>Pagamentos</strong></p>
-                <table class="tabela-pagamentos">
-                    <tr>
-                        <th>Data limite de pagamento</th>
-                        <th>Valor</th>
-                        <th>Estado</th>
-                    </tr>
-                    <tr>
-                        <td>Propina 1 - 31/01/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                    <tr>
-                        <td>Propina 2 - 28/02/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                    <tr>
-                        <td>Propina 3 - 31/03/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                    <tr>
-                        <td>Propina 4 - 30/04/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="pautas">
-                <p><strong>Pautas</strong></p>
-                <p>Sem informações</p>
-            </div>
-            <div class="requerimentos">
-                <p><strong>Requerimentos</strong></p>
-                <p>Sem informações</p>
-            </div>
-            <div class="avisos">
-                <p><strong>Avisos</strong></p>
-                <li>lashdjdhwasdk</li>
+            <div class="documentos">
+        <p><strong>Pesquisa de Documentos Académicos</strong></p>
 
+        <label>Tipo de Documento</label>
+        <select>
+            <option>Todos</option>
+            <option>Certificado de Matrícula</option>
+            <option>Declaração de Frequência</option>
+            <option>Histórico Académico</option>
+        </select>
 
+        <label>Ano Letivo</label>
+        <select>
+            <option>2025/2026</option>
+            <option>2024/2025</option>
+        </select>
 
+        <button>Pesquisar</button>
+    </div>
 
+    <div class="documentos">
+        <p><strong>Lista de Documentos</strong></p>
 
-            </div>
+        <table class="tabela-documentos">
+            <tr>
+                <th>Documento</th>
+                <th>Ano</th>
+                <th>Estado</th>
+            </tr>
+            <tr>
+                <td>Certificado de Matrícula</td>
+                <td>2025/2026</td>
+                <td>Disponível</td>
+            </tr>
+            <tr>
+                <td>Declaração de Frequência</td>
+                <td>2024/2025</td>
+                <td>Disponível</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="documentos">
+        <p><strong>Detalhe do Documento</strong></p>
+
+        <p><strong>Tipo:</strong> Certificado de Matrícula</p>
+        <p><strong>Ano Letivo:</strong> 2025/2026</p>
+        <p><strong>Estado:</strong> Disponível</p>
+
+        <button>Download</button>
+    </div>
         </div>
     </div>
     <footer>
@@ -177,70 +181,45 @@
 
 
 <style>
-    .tabela-pagamentos {
-        width: 100%;
-        border-collapse: collapse;
-    }
 
-    .tabela-pagamentos th,
-    .tabela-pagamentos td {
-        border: 1px solid black;
-        padding: 6px;
-        text-align: left;
-    }
+.documentos {
+    border: 2px solid black;
+    padding: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
 
-    .tabela-pagamentos th {
-        background-color: lightgray;
-        font-weight: bold;
+.documentos button {
+    width: fit-content;
+    padding: 6px 12px;
+    background-color: #373837;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
 
-    }
+.tabela-documentos {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-documentos th,
+.tabela-documentos td {
+    border: 1px solid black;
+    padding: 6px;
+    text-align: left;
+}
+
+.tabela-documentos th {
+    background-color: lightgray;
+}
 
     .main {
         display: flex;
     }
 
-    .pautas {
-        width: auto;
-        color: black;
-        background-color: white;
-        height: auto;
-        grid-area: pautas;
-        border: 2px solid black;
-        padding: 5px;
-    }
-
-    .pagamentos {
-        width: auto;
-        color: black;
-        background-color: white;
-        height: auto;
-        grid-area: pagamentos;
-        border: 2px solid black;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-direction: column;
-        padding: 5px;
-    }
-
-    .requerimentos {
-        height: auto;
-        color: black;
-        background-color: white;
-        width: auto;
-        grid-area: requerimentos;
-        border: 2px solid black;
-        padding: 5px;
-    }
-
-    .avisos {
-
-        color: black;
-        background-color: white;
-        grid-area: avisos;
-        border: 2px solid black;
-        padding: 5px;
-    }
 
     .container3 {
         background-color: white;
@@ -248,15 +227,14 @@
         width: 100%;
         display: grid;
         gap: 6px;
-        grid-template-areas: "requerimentos pautas pagamentos"
-            "avisos avisos avisos";
+        flex-direction: column;
     }
 
     .rodape {
         gap: 5px;
         color: black;
         height: 34vh;
-        padding: px;
+        padding: 5px;
         width: 100%;
         margin: 0;
         border: solid black 2px;
@@ -300,19 +278,18 @@
     }
 
     .container2 {
-        max-height: 100%;
-        padding: 20px;
-        height: 100%;
-        background-color: lightslategray;
         width: 220px;
+        background-color: lightslategray;
         color: white;
+        padding: 20px;
+        min-height: 100%;
     }
 
     body {
-        height: 100%;
         margin: 0px;
-        max-height: 100%;
-        max-width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
 
     header {
@@ -346,7 +323,6 @@
 
         .container2 {
             width: 100%;
-            /*Mantém o comprimento do tamanho da tela */
             height: auto;
             max-height: none;
             box-sizing: border-box;
@@ -362,7 +338,6 @@
         details summary {
             display: block;
             display: list-item;
-            /*isto permite que o icone da seta volte a aparecer no mobile */
         }
 
         .rodape {
@@ -375,7 +350,6 @@
             margin-left: 0;
             word-spacing: 3px;
             text-align: center;
-            /* mantém espaçamento entre palavras */
         }
 
         .container3 {

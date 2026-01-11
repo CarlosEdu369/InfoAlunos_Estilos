@@ -18,7 +18,7 @@
 
     <div class="main">
         <div class="container2">
-                <p class="escolha"><a href="pagina_principal.html">Inicio</a></p>
+            <p class="escolha"><a href="pagina_principal.html">Inicio</a></p>
             </details>
             <details>
                 <summary>
@@ -113,54 +113,72 @@
             </details>
         </div>
         <div class="container3">
-            <div class="pagamentos">
-                <p><strong>Pagamentos</strong></p>
-                <table class="tabela-pagamentos">
-                    <tr>
-                        <th>Data limite de pagamento</th>
-                        <th>Valor</th>
-                        <th>Estado</th>
-                    </tr>
-                    <tr>
-                        <td>Propina 1 - 31/01/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                    <tr>
-                        <td>Propina 2 - 28/02/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                    <tr>
-                        <td>Propina 3 - 31/03/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                    <tr>
-                        <td>Propina 4 - 30/04/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
-                    </tr>
-                </table>
+            <h2>Bolsas e Apoios Sociais</h2>
+            <p>
+                Nesta área pode consultar informações sobre bolsas,
+                alimentação, alojamento, avisos, notícias e documentação
+                de apoio ao estudante.
+            </p>
+
+            <div class="grid-bolsas">
+
+                <div class="card">
+                    <h3> Bolsas de Estudo</h3>
+                    <p><strong>Estado atual:</strong> Em análise</p>
+                    <p><strong>Última candidatura:</strong> 10/09/2024</p>
+                    <p><strong>Entidade:</strong> DGES</p>
+                    <p><a href="#">Consultar candidatura</a></p>
+                </div>
+
+                <div class="card">
+                    <h3> Alimentação</h3>
+                    <p><strong>Tipo de apoio:</strong> Refeições subsidiadas</p>
+                    <p><strong>Cantinas disponíveis:</strong></p>
+                    <ul>
+                        <li>Cantina Central</li>
+                        <li>Bar Académico</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3> Alojamento</h3>
+                    <p><strong>Residência:</strong> Residência Universitária I</p>
+                    <p><strong>Estado do pedido:</strong> Aprovado</p>
+                    <p><strong>Data de entrada:</strong> 01/10/2024</p>
+                </div>
+
+                <div class="card">
+                    <h3> Avisos</h3>
+                    <ul>
+                        <li> Abertura de candidaturas a bolsas (2025)</li>
+                        <li> Atualização dos critérios de apoio social</li>
+                        <li> Prazo limite: 30 de setembro</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3> Notícias</h3>
+                    <ul>
+                        <li>Novo regulamento de bolsas aprovado</li>
+                        <li>Reforço dos apoios sociais para estudantes</li>
+                    </ul>
+                    <p><a href="#">Ver todas as notícias</a></p>
+                </div>
+
+
+                <div class="card">
+                    <h3> Documentação</h3>
+                    <ul>
+                        <li><a href="#">Regulamento de Bolsas</a></li>
+                        <li><a href="#">Formulário de Candidatura</a></li>
+                        <li><a href="#">Guia de Apoio Social</a></li>
+                    </ul>
+                </div>
+
             </div>
-            <div class="pautas">
-                <p><strong>Pautas</strong></p>
-                <p>Sem informações</p>
-            </div>
-            <div class="requerimentos">
-                <p><strong>Requerimentos</strong></p>
-                <p>Sem informações</p>
-            </div>
-            <div class="avisos">
-                <p><strong>Avisos</strong></p>
-                <li>lashdjdhwasdk</li>
 
-
-
-
-
-            </div>
         </div>
+    </div>
     </div>
     <footer>
         <div class="rodape">
@@ -177,6 +195,10 @@
 
 
 <style>
+    .grid-bolsas{
+        justify-content: center;
+        align-items: center;
+    }
     .tabela-pagamentos {
         width: 100%;
         border-collapse: collapse;
@@ -248,8 +270,6 @@
         width: 100%;
         display: grid;
         gap: 6px;
-        grid-template-areas: "requerimentos pautas pagamentos"
-            "avisos avisos avisos";
     }
 
     .rodape {
@@ -300,19 +320,18 @@
     }
 
     .container2 {
-        max-height: 100%;
-        padding: 20px;
-        height: 100%;
-        background-color: lightslategray;
         width: 220px;
+        background-color: lightslategray;
         color: white;
+        padding: 20px;
+        min-height: 100%;
     }
 
     body {
-        height: 100%;
         margin: 0px;
-        max-height: 100%;
-        max-width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
 
     header {
