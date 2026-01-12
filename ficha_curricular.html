@@ -130,7 +130,7 @@
             <div class="ficha-bloco">
                 <p><strong>Lista de Disciplinas</strong></p>
 
-                <table class="tabela-pagamentos">
+                <table class="tabela">
                     <tr>
                         <th>Código</th>
                         <th>Nome</th>
@@ -172,6 +172,23 @@
 
 
 <style>
+    .tabela {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .tabela th,
+    .tabela td {
+        border: 1px solid black;
+        padding: 6px;
+        text-align: left;
+    }
+
+    .tabela th {
+        background-color: lightgray;
+        font-weight: bold;
+    }
+
     .ficha-bloco {
         border: 2px solid black;
         background-color: white;

@@ -114,47 +114,45 @@
         </div>
         <div class="container3">
             <div class="ficha-bloco">
-                <p><strong>Pesquisa de Disciplina</strong></p>
+    <p><strong>Histórico de Inscrições</strong></p>
 
-                <label>Curso</label>
-                <select>
-                    <option>Licenciatura em Informática</option>
-                </select>
-
-                <label>Disciplina</label>
-                <input type="text" placeholder="Nome da disciplina">
-
-                <button>Pesquisar</button>
-            </div>
-
+    <table class="tabela">
+        <tr>
+            <th>Ano Letivo</th>
+            <th>Curso</th>
+            <th>Estado</th>
+        </tr>
+        <tr>
+            <td>2023/2024</td>
+            <td>Licenciatura em Informática</td>
+            <td>Inscrito</td>
+        </tr>
+        <tr>
+            <td>2022/2023</td>
+            <td>Licenciatura em Informática</td>
+            <td>Concluído</td>
+        </tr>
+    </table>
+</div>
             <div class="ficha-bloco">
-                <p><strong>Lista de Disciplinas</strong></p>
+    <p><strong>Lista de Disciplinas do Curso</strong></p>
 
-                <table class="tabela">
-                    <tr>
-                        <th>Código</th>
-                        <th>Nome</th>
-                        <th>Ações</th>
-                    </tr>
-                    <tr>
-                        <td>INF101</td>
-                        <td>Programação Web</td>
-                        <td><button>Ver Programa</button></td>
-                    </tr>
-                </table>
-            </div>
+    <table class="tabela">
+        <tr>
+            <th>Código</th>
+            <th>Nome</th>
+            <th>ECTS</th>
+        </tr>
+        <tr>
+            <td>INF101</td>
+            <td>Programação Web</td>
+            <td>6</td>
+        </tr>
+    </table>
+</div>
 
-            <div class="ficha-bloco">
-                <p><strong>Programa da Disciplina</strong></p>
 
-                <p><strong>Objetivos:</strong> Desenvolver competências em tecnologias web.</p>
-                <p><strong>Avaliação:</strong> Projeto + Teste escrito</p>
-                <p><strong>Bibliografia:</strong> Duckett, MDN</p>
-                <p><strong>Programa:</strong> HTML, CSS, Layouts, Responsividade</p>
-                <p><strong>Outros Dados:</strong> 6 ECTS · Semestral</p>
-                <p><strong>Corpo Docente:</strong> Prof. João Silva</p>
-                <p><strong>Documentos:</strong> Programa PDF · Slides</p>
-            </div>
+
         </div>
     </div>
     <footer>
@@ -172,28 +170,6 @@
 
 
 <style>
-    .main {
-        display: flex;
-    }
-
-    .ficha-bloco {
-        border: 2px solid black;
-        background-color: white;
-        padding: 12px;
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
-
-    .ficha-bloco button {
-        width: fit-content;
-        padding: 6px 12px;
-        background-color: #484848;
-        color: white;
-        border: none;
-        cursor: pointer;
-    }
-
     .tabela {
         width: 100%;
         border-collapse: collapse;
@@ -209,7 +185,37 @@
     .tabela th {
         background-color: lightgray;
         font-weight: bold;
+    }
 
+    .ficha-bloco {
+        border: 2px solid black;
+        background-color: white;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .ficha-bloco button {
+        width: fit-content;
+        padding: 6px 12px;
+        background-color: #223a2c;
+        color: white;
+        border: none;
+    }
+
+    .main {
+        display: flex;
+    }
+
+    .pautas {
+        width: auto;
+        color: black;
+        background-color: white;
+        height: auto;
+        grid-area: pautas;
+        border: 2px solid black;
+        padding: 5px;
     }
 
 
@@ -218,10 +224,9 @@
         background-color: white;
         padding: 20px;
         width: 100%;
-        display: flex;
+        display: grid;
         gap: 6px;
         flex-direction: column;
-
     }
 
     .rodape {
@@ -284,7 +289,6 @@
         min-height: 100vh;
         display: flex;
         flex-direction: column;
-        flex: 1;
     }
 
     header {
@@ -318,7 +322,6 @@
 
         .container2 {
             width: 100%;
-            /*Mantém o comprimento do tamanho da tela */
             height: auto;
             max-height: none;
             box-sizing: border-box;
@@ -334,7 +337,6 @@
         details summary {
             display: block;
             display: list-item;
-            /*isto permite que o icone da seta volte a aparecer no mobile */
         }
 
         .rodape {
