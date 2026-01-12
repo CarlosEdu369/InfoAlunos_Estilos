@@ -18,7 +18,7 @@
 
     <div class="main">
         <div class="container2">
-                <p class="escolha"><a href="pagina_principal.html">Inicio</a></p>
+            <p class="escolha"><a href="pagina_principal.html">Inicio</a></p>
             </details>
             <details>
                 <summary>
@@ -113,52 +113,95 @@
             </details>
         </div>
         <div class="container3">
-            <div class="pagamentos">
-                <p><strong>Pagamentos</strong></p>
-                <table class="tabela-pagamentos">
+            <div class="horarios-bloco">
+                <p><strong>Horário das Aulas</strong></p>
+
+                <table class="tabela-horarios">
                     <tr>
-                        <th>Data limite de pagamento</th>
-                        <th>Valor</th>
-                        <th>Estado</th>
+                        <th>Hora</th>
+                        <th>Segunda</th>
+                        <th>Terça</th>
+                        <th>Quarta</th>
+                        <th>Quinta</th>
+                        <th>Sexta</th>
                     </tr>
+
                     <tr>
-                        <td>Propina 1 - 31/01/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
+                        <td>09:00 - 11:00</td>
+                        <td>Programação Web</td>
+                        <td></td>
+                        <td>Sistemas Operativos</td>
+                        <td></td>
+                        <td></td>
                     </tr>
+
                     <tr>
-                        <td>Propina 2 - 28/02/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
+                        <td>11:00 - 13:00</td>
+                        <td></td>
+                        <td>Bases de Dados</td>
+                        <td></td>
+                        <td>Programação Web</td>
+                        <td></td>
                     </tr>
+
                     <tr>
-                        <td>Propina 3 - 31/03/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
+                        <td>13:00 - 15:00</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
                     </tr>
+
                     <tr>
-                        <td>Propina 4 - 30/04/2026</td>
-                        <td>70€</td>
-                        <td>Pendente</td>
+                        <td>15:00 - 17:00</td>
+                        <td>Engenharia de Software</td>
+                        <td></td>
+                        <td></td>
+                        <td>Bases de Dados</td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>17:00 - 19:00</td>
+                        <td></td>
+                        <td>Sistemas Operativos</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                    <tr>
+                        <td>19:00 - 21:00</td>
+                        <td></td>
+                        <td></td>
+                        <td>Programação Web</td>
+                        <td></td>
+                        <td></td>
                     </tr>
                 </table>
             </div>
-            <div class="pautas">
-                <p><strong>Pautas</strong></p>
-                <p>Sem informações</p>
-            </div>
-            <div class="requerimentos">
-                <p><strong>Requerimentos</strong></p>
-                <p>Sem informações</p>
-            </div>
-            <div class="avisos">
-                <p><strong>Avisos</strong></p>
-                <li>lashdjdhwasdk</li>
 
+            <div class="horarios-bloco">
+                <p><strong>Calendário de Avaliações</strong></p>
 
-
-
-
+                <table class="tabela-horarios">
+                    <tr>
+                        <th>Data</th>
+                        <th>Unidade Curricular</th>
+                        <th>Tipo</th>
+                    </tr>
+                    <tr>
+                        <td>15/02/2026</td>
+                        <td>Programação Web</td>
+                        <td>Teste</td>
+                    </tr>
+                    <tr>
+                        <td>28/02/2026</td>
+                        <td>Bases de Dados</td>
+                        <td>Projeto</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
@@ -177,69 +220,34 @@
 
 
 <style>
-    .tabela-pagamentos {
+    .horarios-bloco {
+        border: 2px solid black;
+        background-color: white;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .tabela-horarios {
         width: 100%;
         border-collapse: collapse;
     }
 
-    .tabela-pagamentos th,
-    .tabela-pagamentos td {
+    .tabela-horarios th,
+    .tabela-horarios td {
         border: 1px solid black;
         padding: 6px;
-        text-align: left;
+        text-align: center;
     }
 
-    .tabela-pagamentos th {
+    .tabela-horarios th {
         background-color: lightgray;
         font-weight: bold;
-
     }
 
     .main {
         display: flex;
-    }
-
-    .pautas {
-        width: auto;
-        color: black;
-        background-color: white;
-        height: auto;
-        grid-area: pautas;
-        border: 2px solid black;
-        padding: 5px;
-    }
-
-    .pagamentos {
-        width: auto;
-        color: black;
-        background-color: white;
-        height: auto;
-        grid-area: pagamentos;
-        border: 2px solid black;
-        display: flex;
-        align-items: flex-start;
-        justify-content: flex-start;
-        flex-direction: column;
-        padding: 5px;
-    }
-
-    .requerimentos {
-        height: auto;
-        color: black;
-        background-color: white;
-        width: auto;
-        grid-area: requerimentos;
-        border: 2px solid black;
-        padding: 5px;
-    }
-
-    .avisos {
-
-        color: black;
-        background-color: white;
-        grid-area: avisos;
-        border: 2px solid black;
-        padding: 5px;
     }
 
     .container3 {
@@ -248,15 +256,14 @@
         width: 100%;
         display: grid;
         gap: 6px;
-        grid-template-areas: "requerimentos pautas pagamentos"
-            "avisos avisos avisos";
+        flex-direction: column;
     }
 
     .rodape {
         gap: 5px;
         color: black;
         height: 34vh;
-        padding: px;
+        padding: 5px;
         width: 100%;
         margin: 0;
         border: solid black 2px;
@@ -300,19 +307,18 @@
     }
 
     .container2 {
-        max-height: 100%;
-        padding: 20px;
-        height: 100%;
-        background-color: lightslategray;
         width: 220px;
+        background-color: lightslategray;
         color: white;
+        padding: 20px;
+        min-height: 100%;
     }
 
     body {
-        height: 100%;
         margin: 0px;
-        max-height: 100%;
-        max-width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
 
     header {
@@ -346,7 +352,6 @@
 
         .container2 {
             width: 100%;
-            /*Mantém o comprimento do tamanho da tela */
             height: auto;
             max-height: none;
             box-sizing: border-box;
@@ -362,7 +367,6 @@
         details summary {
             display: block;
             display: list-item;
-            /*isto permite que o icone da seta volte a aparecer no mobile */
         }
 
         .rodape {
@@ -375,7 +379,6 @@
             margin-left: 0;
             word-spacing: 3px;
             text-align: center;
-            /* mantém espaçamento entre palavras */
         }
 
         .container3 {

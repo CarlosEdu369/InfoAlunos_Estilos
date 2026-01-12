@@ -144,12 +144,80 @@
                 </table>
             </div>
             <div class="pautas">
-                <p><strong>Pautas</strong></p>
-                <p>Sem informações</p>
+                <p><strong> Pautas</strong></p>
+
+                <label>Unidade Curricular</label>
+                <select>
+                    <option>Programação Web</option>
+                    <option>Bases de Dados</option>
+                    <option>Sistemas Operativos</option>
+                </select>
+
+                <label>Ano Letivo</label>
+                <select>
+                    <option>2025/2026</option>
+                    <option>2024/2025</option>
+                </select>
+
+                <button>Pesquisar</button>
+                <p><strong>Lista de Pautas</strong></p>
+
+                <table class="tabela">
+                    <tr>
+                        <th>Unidade Curricular</th>
+                        <th>Ano</th>
+                        <th>Estado</th>
+                    </tr>
+                    <tr>
+                        <td>Programação Web</td>
+                        <td>2025/2026</td>
+                        <td>Disponível</td>
+                    </tr>
+                </table>
+                <p><strong>Alunos da Pauta</strong></p>
+
+                <table class="tabela">
+                    <tr>
+                        <th>Nº Aluno</th>
+                        <th>Nome</th>
+                        <th>Nota</th>
+                        <th>Situação</th>
+                    </tr>
+                    <tr>
+                        <td>20231234</td>
+                        <td>João Silva</td>
+                        <td>15</td>
+                        <td>Aprovado</td>
+                    </tr>
+                    <tr>
+                        <td>20231235</td>
+                        <td>Ana Costa</td>
+                        <td>9</td>
+                        <td>Reprovado</td>
+                    </tr>
+                </table>
             </div>
             <div class="requerimentos">
                 <p><strong>Requerimentos</strong></p>
-                <p>Sem informações</p>
+                
+
+                <table border="1" width="100%">
+                    <tr>
+                        <th>Nº</th>
+                        <th>Assunto</th>
+                        <th>Estado</th>
+                    </tr>
+                    <tr>
+                        <td>2024/01</td>
+                        <td>Pedido de declaração</td>
+                        <td>Em análise</td>
+                    </tr>
+                    <tr>
+                        <td>2024/02</td>
+                        <td>Revisão de propina</td>
+                        <td>Concluído</td>
+                    </tr>
+                </table>
             </div>
             <div class="avisos">
                 <p><strong>Avisos</strong></p>
@@ -177,6 +245,25 @@
 
 
 <style>
+
+    .tabela {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .tabela th,
+    .tabela td {
+        border: 1px solid black;
+        padding: 6px;
+        text-align: left;
+    }
+
+    .tabela th {
+        background-color: lightgray;
+        font-weight: bold;
+
+    }
+
     .tabela-pagamentos {
         width: 100%;
         border-collapse: collapse;
