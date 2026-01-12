@@ -109,59 +109,77 @@
                 <summary>
                     Eleições
                 </summary>
-                <p class="escolha"><a href="detalhes_eleicoes.html"></a>Detalhes</p>
+                <p class="escolha"><a href="detalhes_eleicoes.html">Detalhes</a></p>
             </details>
         </div>
         <div class="container3">
-            <div class="pagamentos">
-                <div class="bloco">
-                    <p><strong>Pesquisa</strong></p>
+                <div class="ficha-bloco">
+                <p><strong>Pesquisa</strong></p>
 
-                    <label>Curso</label>
-                    <select>
-                        <option>Licenciatura em Informática</option>
-                    </select>
+                <label>Curso</label>
+                <select>
+                    <option>Licenciatura em Informática</option>
+                </select>
 
-                    <label>Disciplina</label>
-                    <input type="text" placeholder="Nome da disciplina">
+                <label>Disciplina</label>
+                <input type="text" placeholder="Nome da disciplina">
 
-                    <button>Pesquisar</button>
-                </div>
+                <button>Pesquisar</button>
+            </div>
 
-                <div class="bloco">
-                    <p><strong>Plano de Conclusão</strong></p>
+            <div class="ficha-bloco">
+                <p><strong>Lista de Cursos</strong></p>
 
-                    <table class="tabela">
-                        <tr>
-                            <th>Curso</th>
-                            <th>Disciplina</th>
-                            <th>Estado</th>
-                        </tr>
-                        <tr>
-                            <td>Lic. Informática</td>
-                            <td>Programação Web</td>
-                            <td>Por concluir</td>
-                        </tr>
-                        <tr>
-                            <td>Lic. Informática</td>
-                            <td>Sistemas Operativos</td>
-                            <td>Concluída</td>
-                        </tr>
-                    </table>
-                </div>
+                <table class="tabela">
+                    <tr>
+                        <th>Curso</th>
+                        <th>Ano</th>
+                    </tr>
+                    <tr>
+                        <td>Licenciatura em Informática</td>
+                        <td>3º Ano</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="ficha-bloco">
+                <p><strong>Lista de Disciplinas</strong></p>
+
+                <table class="tabela">
+                    <tr>
+                        <th>Disciplina</th>
+                        <th>ECTS</th>
+                        <th>Estado</th>
+                    </tr>
+                    <tr>
+                        <td>Programação Web</td>
+                        <td>6</td>
+                        <td>Prescrita</td>
+                    </tr>
+                </table>
             </div>
             </div>
         </div>
-        <footer>
-            <div class="rodape">
-                <p><strong>Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas</strong></p>
-                <p>Colégio dos Jesuitas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410</p>
-            </div>
-        </footer>
+    </div>
+    <footer>
+        <div class="rodape">
+            <p><strong>Universidade da Madeira - Gabinete de Desenvolvimento de Aplicações Informáticas</strong></p>
+            <p>Colégio dos Jesuitas, 9000-081 Funchal | Tel: +351 291 209400 | Fax: +351 291 209410</p>
+        </div>
+    </footer>
 </body>
 
 
 <style>
+    .ficha-bloco {
+        border: 2px solid black;
+        background-color: white;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
     .bloco {
         border: 2px solid black;
         padding: 12px;
@@ -169,7 +187,7 @@
         display: flex;
         flex-direction: column;
         gap: 8px;
-        margin:5px;
+        margin: 5px;
     }
 
     .bloco button {
